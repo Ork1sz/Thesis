@@ -4,7 +4,7 @@
 #### published in the Journal of Computational and Graphical Statistics
 
 # Source path to BDSVD-FINAL.R
-source("C:/Users/orkan/OneDrive/Pulpit/thesis/finalcode/BDSVD-FINAL.R")
+source("C:/Users/orkan/OneDrive/Dokumenty/GitHub/Thesis/BDSVD-FINAL.R")
 library(cvCovEst) #for the ad hoc procedure
 library(mvtnorm)  #for rmvnorm1
 library(shock)    #for SHDJ and SHRR
@@ -316,12 +316,18 @@ tryCatch({
     )
   
   # 3. Define dynamic titles and filenames
-  title_text <- sprintf("BD-SVD Results for Design '%s' (n=%d, p=%d)",
-                        design, n, p)
-  caption_text <- sprintf("Mode: '%s' | Weight Method: '%s'",
-                          mode, weight_method)
-  base_filename <- sprintf("n%d_p%d_design%s_mode%s_weight%s",
-                           n, p, design, mode, weight_method)
+  title_text   <- sprintf(
+    "BD-SVD Results for Design '%s' (n=%d, p=%d, b=%d)",
+    design, n, p, b
+  )
+  caption_text <- sprintf(
+    "Mode: '%s' | Weight Method: '%s'",
+    mode, weight_method
+  )
+  base_filename <- sprintf(
+    "n%d_p%d_b%d_design%s_mode%s_weight%s",
+    n, p, b, design, mode, weight_method
+  )
   
   plot_filename <- paste0(base_filename, ".png")
   q_hist_filename <- paste0(base_filename, "_q_histogram.png")
