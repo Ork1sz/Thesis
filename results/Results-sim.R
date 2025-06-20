@@ -4,7 +4,7 @@
 #### published in the Journal of Computational and Graphical Statistics
 
 # Source path to BDSVD-FINAL.R
-source("C:/Users/orkan/OneDrive/Dokumenty/GitHub/Thesis/BDSVD-FINAL.R")
+source("PATH/GitHub/Thesis/BDSVD-FINAL.R")
 library(cvCovEst) #for the ad hoc procedure
 library(mvtnorm)  #for rmvnorm1
 library(shock)    #for SHDJ and SHRR
